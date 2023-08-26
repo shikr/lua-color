@@ -1,3 +1,4 @@
+local PLUGIN_DIR = (...):match("(.-)[^%.]+$")
 ---
 -- ### Style terminal output
 --
@@ -19,8 +20,8 @@
 -- to work on all *nix systems  
 -- [More information](https://en.wikipedia.org/wiki/ANSI_escape_code#SGR_\(Select_Graphic_Rendition\)_parameters)
 
-local Color = require "lua-color"
-local utils = require "lua-color.utils"
+local Color = require(PLUGIN_DIR)
+local utils = require(PLUGIN_DIR .. "utils")
 
 local escape = "\x1b["
 
